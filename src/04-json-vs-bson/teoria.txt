@@ -1,0 +1,19 @@
+JSON:
+    Ventajas:
+        Amigable: Facilmente organizar informacion en un doc
+        Facil de leer: Sintaxis clave y valor
+        Formato muy usado en el medio.
+    Desventajas:
+        Basado en texto, consume mucho espacio
+        No hay muchos estilos de datos
+
+BSON:
+    Ventajas:
+        Representacion Binaria.
+        No consume mucho espacio.
+        Tiene mas tipos de datos.
+    Desventajas:
+        No es muy usado.
+        Formato para nada fácil de leer.
+
+    
