@@ -1,0 +1,9 @@
+-Al usar use("nombreBD) si no está creada, la creará automaticamente.
+-Mongo siempre informa sobre la ultima instruccion en el playground.
+-.drop(): Borra todos los documentos de la coleccion.
+-.find(): Lista la información del documento.
+-.count(): Cuenta información en el documento.
+-Si hay un _id duplicado y estamos insertando varios con .insertMany() 
+    los inserta pero el _id duplicado, lo inserta una sola vez (el primero),
+    y cuando encuentra el duplicado detiene la insercion de más datos.
+
