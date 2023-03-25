@@ -1,0 +1,27 @@
+use("platzi_store")
+
+//Removiendo un elemento del array:
+/* db.inventory.updateMany(
+    //Identificador, como no hay ninguno trae todos.
+    {},
+    //Operador pull solo para arrays
+    {
+        $pull:{
+            tags: "book"
+        }
+    }
+) */
+
+//Remover más de un elemento:
+db.inventory.updateMany(
+    //Identificador, como no hay ninguno trae todos.
+    {},
+    //Operador pull solo para arrays
+    {
+        $pull:{
+            tags: {
+                $in: ["appliance", "school"]
+            }
+        }
+    }
+)

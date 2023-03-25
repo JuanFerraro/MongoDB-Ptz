@@ -1,0 +1,12 @@
+use("platzi_store")
+
+db.inventory.updateOne(
+    //Identificador
+    {_id: 4},
+    //Operador push solo para arrays
+    {
+        $push:{
+            tags: "headphone"
+        }
+    }
+)
