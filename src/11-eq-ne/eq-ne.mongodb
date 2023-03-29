@@ -1,0 +1,13 @@
+use("platzi_store")
+
+/* //USING $EQ de por sí es implicito.
+//Implicito
+db.inventory.find({qty: 20})
+//Explicito
+db.inventory.find({qty: { $eq: 20}}) */
+
+db.inventory.find({ "item.code" : "123"})
+db.inventory.find({ "item.name" : { $eq: "ab"}})
+
+/* Using $ne */
+db.inventory.find({ qty: { $ne: 20}})
