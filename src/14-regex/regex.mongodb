@@ -1,0 +1,14 @@
+use("platzi_store")
+
+db.inventory.find({"item.description": "Single line description."})
+//Tengan line
+db.inventory.find({"item.description": { $regex: /line/ }})
+
+//Terminen en line
+db.inventory.find({"item.description": { $regex: /line$/ }})
+
+//Empieza por single
+db.inventory.find({"item.description": { $regex: /^single/i }})
+
+//Inician por S (salto de linea) m: multilines
+db.inventory.find({"item.description": { $regex: /^s/im }})
