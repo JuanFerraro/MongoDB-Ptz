@@ -1,0 +1,31 @@
+use("platzi_store")
+
+// $in: Sirve para valores y arrays
+db.inventory.find(
+    { qty: {$in: [20, 25]}} //Es como hacer un or
+)
+
+db.inventory.find({ tags: { $in: ["book", "electronics"]}})
+
+// $nin: Contrario a $in
+db.inventory.find({ tags: { $nin: ["book", "electronics"]}})
+
+//Solo funcionan para Arrays
+db.inventory.find(
+    {tags: ["school", "book"]} //Exacto, con la misma posición.
+)
+
+//Arrays $all, inclusivo no importa el orden si están los dos.
+db.inventory.find({ tags: {$all: ["book", "school"]}})
+
+//Arrays $size, busqueda por tamaño del array
+db.inventory.find({ tags: {$size: 2}})
+
+//Arrays $elemMatch, array con objetos dentro
+db.survey.find({ 
+    results: { 
+        $elemMatch: {
+            product: "xyz", score: { $gte: 7}
+        }
+    }
+})
